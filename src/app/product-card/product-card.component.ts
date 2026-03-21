@@ -1,4 +1,4 @@
-import { booleanAttribute, Component, input } from '@angular/core';
+import { booleanAttribute, Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'psl-product-card',
@@ -11,4 +11,9 @@ export class ProductCardComponent {
   price = input<number>(0);
   inStock = input(false, { transform: booleanAttribute });
   label = input<string>('', { alias: 'display-label' });
+
+  addedToCart = output<string>();
+  priceAlerted = output<number>({
+    alias: 'price-alert',
+  });
 }

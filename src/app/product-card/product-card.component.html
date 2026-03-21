@@ -3,3 +3,6 @@
 <p>{{ price() }}</p>
 <p>{{ inStock() }}</p>
 <p>{{ label() }}</p>
+
+<button (click)="addedToCart.emit(name())">Ajouter au panier</button>
+<button (click)="priceAlerted.emit(price())">Alerter sur les prix</button>
