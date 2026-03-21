@@ -1,0 +1,7 @@
+<p>user-card works!</p>
+@if (isPublic()) {
+  <p>{{ userName() }}</p>
+  <button (click)="switchProfile()">Change current profile</button>
+} @else {
+  <p>The current profile is private</p>
+}
